@@ -43,8 +43,10 @@ public class DefaultScannerService extends AbstractMetaDataDiscovery
         //Store collection of beans.xml's before scanning archives
 
         String[] urlPaths = findBeansXmlBases(META_INF_BEANS_XML, loader);
-        
-        this.getAnnotationDB().scanArchives(urlPaths);
+
+        for (String urlPath : urlPaths) {
+            addWebBeansXmlLocation(urlPath);
+        }
     }
 
 }

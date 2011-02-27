@@ -24,13 +24,9 @@ import java.util.Set;
 
 import javax.servlet.ServletContext;
 
-import org.apache.webbeans.config.OWBLogConst;
 import org.apache.webbeans.corespi.scanner.AbstractMetaDataDiscovery;
-import org.apache.webbeans.corespi.scanner.AnnotationDB;
-import org.apache.webbeans.corespi.se.BeansXmlAnnotationDB;
 import org.apache.webbeans.logger.WebBeansLogger;
 import org.apache.webbeans.util.WebBeansUtil;
-import org.scannotation.WarUrlFinder;
 
 /**
  * Configures the web application to find beans.
@@ -56,42 +52,6 @@ public class WebScannerService extends AbstractMetaDataDiscovery
     
     protected void configure() throws Exception
     {
-        try
-        {
-            if (!configure)
-            {
-                Set<String> arcs = getArchives();
-                String[] urls = new String[arcs.size()];
-                urls = arcs.toArray(urls);
-
-                getAnnotationDB().scanArchives(urls);
-                
-                configure = true;
-            }
-
-        }
-        catch (Exception e)
-        {
-            logger.error(OWBLogConst.ERROR_0002, e);
-            throw e;
-        }
-
-    }
-
-    /**
-     *  @return all beans.xml paths
-     */
-    private Set<String> getArchives() throws Exception
-    {
-        Set<String> lists = createURLFromMarkerFile();
-        String warUrlPath = createURLFromWARFile();
-
-        if (warUrlPath != null)
-        {
-            lists.add(warUrlPath);
-        }
-
-        return lists;
     }
 
     /* Creates URLs from the marker file */
@@ -173,21 +133,6 @@ public class WebScannerService extends AbstractMetaDataDiscovery
         if (url != null)
         {
             addWebBeansXmlLocation(url.toExternalForm());
-            URL resourceUrl = WarUrlFinder.findWebInfClassesPath(this.servletContext);
-
-            if (resourceUrl == null)
-            {
-                return null;
-            }
-
-            //set resource to beans.xml mapping
-            AnnotationDB annotationDB = getAnnotationDB();
-
-            if(annotationDB instanceof BeansXmlAnnotationDB)
-            {
-                ((BeansXmlAnnotationDB)annotationDB).setResourceBeansXml(resourceUrl.toExternalForm(), url.toExternalForm());
-            }
-            return resourceUrl.toExternalForm();
         }
 
         return null;

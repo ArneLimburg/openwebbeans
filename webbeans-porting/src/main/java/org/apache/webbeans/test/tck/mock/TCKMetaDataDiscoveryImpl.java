@@ -18,16 +18,17 @@
  */
 package org.apache.webbeans.test.tck.mock;
 
-import java.io.IOException;
-import java.net.URL;
-
-import javassist.ClassPool;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.webbeans.corespi.scanner.AbstractMetaDataDiscovery;
 import org.apache.webbeans.util.Asserts;
 
+import javax.enterprise.classscan.ScanJob;
+
 public class TCKMetaDataDiscoveryImpl extends AbstractMetaDataDiscovery
 {
+    private Set<Class<?>> classesToScan = new HashSet<Class<?>>();
 
     public TCKMetaDataDiscoveryImpl()
     {
@@ -37,23 +38,15 @@ public class TCKMetaDataDiscoveryImpl extends AbstractMetaDataDiscovery
     @Override
     protected void configure() throws Exception
     {
-        
-        
+        ScanJob scanJob = new ScanJob(null, null, null, true, true, true, true);
+        scanJob.setClassesToScan(classesToScan.toArray(new Class<?>[classesToScan.size()]));
+        OwbTckClassScanClient.setScanJob(scanJob);
     }
 
     public void addBeanClass(Class<?> clazz)
     {
         Asserts.assertNotNull(clazz);
-        
-        URL url = ClassPool.getDefault().find(clazz.getName());
-        try
-        {
-            this.getAnnotationDB().scanClass(url.openStream());
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        classesToScan.add(clazz);
     }
     
     public void addBeanXml(String url)

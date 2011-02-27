@@ -18,14 +18,16 @@
  */
 package org.apache.webbeans.lifecycle.test;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.Collection;
-
-import javassist.ClassPool;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.webbeans.corespi.scanner.AbstractMetaDataDiscovery;
+import org.apache.webbeans.corespi.scanner.OwbClassScanClient;
 import org.apache.webbeans.util.Asserts;
+
+import javax.enterprise.classscan.ClassScanner;
+import javax.enterprise.classscan.ScanJob;
 
 /**
  * Used by each test. 
@@ -34,6 +36,8 @@ import org.apache.webbeans.util.Asserts;
  */
 public class OpenWebBeansTestMetaDataDiscoveryService extends AbstractMetaDataDiscovery
 {
+    private Set<Class<?>> classesToScan = new HashSet<Class<?>>();
+
     public OpenWebBeansTestMetaDataDiscoveryService()
     {
         
@@ -42,7 +46,9 @@ public class OpenWebBeansTestMetaDataDiscoveryService extends AbstractMetaDataDi
     @Override
     protected void configure() throws Exception
     {
-        //Nothing we scan
+        ScanJob scanJob = new ScanJob(null, null, null, true, true, true, true);
+        scanJob.setClassesToScan(classesToScan.toArray(new Class<?>[classesToScan.size()]));
+        OwbTestClassScanClient.setScanJob(scanJob);
     }
     
     /**
@@ -83,17 +89,7 @@ public class OpenWebBeansTestMetaDataDiscoveryService extends AbstractMetaDataDi
     private void addBeanClass(Class<?> clazz)
     {
         Asserts.assertNotNull(clazz);
-        
-        URL url = ClassPool.getDefault().find(clazz.getName());
-        
-        try
-        {
-            this.getAnnotationDB().scanClass(url.openStream());
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        classesToScan.add(clazz);
     }
     
     /**
@@ -106,6 +102,13 @@ public class OpenWebBeansTestMetaDataDiscoveryService extends AbstractMetaDataDi
         
         addWebBeansXmlLocation(beansXmlPath);
     }
-    
+
+    @Override
+    public Set<Class<?>> getBeanClasses() {
+        // first deregister the default OWB scanner client, so we don't pick up any unwanted stuff...
+        ClassScanner.getInstance().deregisterClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
+
+        return super.getBeanClasses();
+    }
 
 }
