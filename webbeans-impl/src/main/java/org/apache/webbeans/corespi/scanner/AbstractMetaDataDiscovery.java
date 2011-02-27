@@ -122,16 +122,6 @@ public abstract class AbstractMetaDataDiscovery implements ScannerService
     }
 
     /**
-     * @return the aNNOTATION_DB
-     */
-    /*X
-    protected AnnotationDB getAnnotationDB()
-    {
-        return annotationDB;
-    }
-    */
-
-    /**
      * add the given beans.xml path to the locations list 
      * @param beansXmlLocation location path
      */

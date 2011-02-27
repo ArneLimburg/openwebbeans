@@ -27,6 +27,7 @@ import java.util.Properties;
 import javax.ejb.Singleton;
 import javax.ejb.Stateful;
 import javax.ejb.Stateless;
+import javax.enterprise.classscan.ClassScanner;
 import javax.enterprise.inject.spi.BeanManager;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -47,9 +48,11 @@ import org.apache.openejb.jee.SingletonBean;
 import org.apache.openejb.jee.StatefulBean;
 import org.apache.openejb.jee.StatelessBean;
 import org.apache.webbeans.config.WebBeansContext;
+import org.apache.webbeans.corespi.scanner.OwbClassScanClient;
 import org.apache.webbeans.ejb.EjbPlugin;
 import org.apache.webbeans.lifecycle.StandaloneLifeCycle;
 import org.apache.webbeans.logger.WebBeansLogger;
+import org.apache.webbeans.test.tck.mock.OwbTckClassScanClient;
 import org.apache.webbeans.test.tck.mock.TCKMetaDataDiscoveryImpl;
 import org.jboss.testharness.api.DeploymentException;
 import org.jboss.testharness.spi.StandaloneContainers;
@@ -65,6 +68,10 @@ public class StandaloneContainersImpl implements StandaloneContainers
 
     public void deployInternal(Iterable<Class<?>> classes) throws DeploymentException
     {
+        ClassScanner scanner = ClassScanner.getInstance();
+        scanner.deregisterClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
+        scanner.deregisterClient(OwbTckClassScanClient.SCANNER_CLIENT_NAME);
+
         // Scanner service
         final TCKMetaDataDiscoveryImpl discovery = (TCKMetaDataDiscoveryImpl) WebBeansContext.getInstance().getScannerService();
 
@@ -99,6 +106,10 @@ public class StandaloneContainersImpl implements StandaloneContainers
 
     public boolean deployInternal(Iterable<Class<?>> classes, Iterable<String> beansXmls)
     {
+        ClassScanner scanner = ClassScanner.getInstance();
+        scanner.deregisterClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
+        scanner.deregisterClient(OwbTckClassScanClient.SCANNER_CLIENT_NAME);
+
         try
         {
             final TCKMetaDataDiscoveryImpl discovery = (TCKMetaDataDiscoveryImpl) WebBeansContext.getInstance().getScannerService();
