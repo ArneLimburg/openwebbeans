@@ -25,6 +25,7 @@ import org.apache.webbeans.el.ELContextStore;
 import org.apache.webbeans.logger.WebBeansLogger;
 import org.apache.webbeans.util.WebBeansUtil;
 
+
 /**
  * Default LifeCycle for a standalone application without a ServletContainer.
  */

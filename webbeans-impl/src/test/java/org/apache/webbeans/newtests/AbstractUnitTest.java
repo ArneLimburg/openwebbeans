@@ -24,15 +24,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
+import javax.enterprise.classscan.ClassScanner;
 import javax.enterprise.inject.spi.Bean;
 import javax.enterprise.inject.spi.BeanManager;
 import javax.enterprise.inject.spi.Extension;
 
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.config.WebBeansFinder;
+import org.apache.webbeans.corespi.scanner.OwbClassScanClient;
 import org.apache.webbeans.exception.WebBeansConfigurationException;
 import org.apache.webbeans.lifecycle.test.OpenWebBeansTestLifeCycle;
 import org.apache.webbeans.lifecycle.test.OpenWebBeansTestMetaDataDiscoveryService;
+import org.apache.webbeans.lifecycle.test.OwbTestClassScanClient;
 import org.apache.webbeans.util.WebBeansUtil;
 import org.junit.Assert;
 
@@ -55,6 +58,10 @@ public abstract class AbstractUnitTest
     
     protected void startContainer(Collection<Class<?>> beanClasses, Collection<String> beanXmls)
     {
+        ClassScanner scanner = ClassScanner.getInstance();
+        scanner.deregisterClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
+        scanner.deregisterClient(OwbTestClassScanClient.SCANNER_CLIENT_NAME);
+
         WebBeansFinder.clearInstances(WebBeansUtil.getCurrentClassLoader());
         //Creates a new container
         testLifecycle = new OpenWebBeansTestLifeCycle();

@@ -104,9 +104,10 @@ public class OpenWebBeansTestMetaDataDiscoveryService extends AbstractMetaDataDi
     }
 
     @Override
-    public Set<Class<?>> getBeanClasses() {
+    public Set<Class<?>> getBeanClasses()
+    {
         // first deregister the default OWB scanner client, so we don't pick up any unwanted stuff...
-        ClassScanner.getInstance().deregisterClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
+        ClassScanner.getInstance().vetoClient(OwbClassScanClient.SCANNER_CLIENT_NAME);
 
         return super.getBeanClasses();
     }

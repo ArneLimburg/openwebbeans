@@ -44,7 +44,8 @@ public class DefaultScannerService extends AbstractMetaDataDiscovery
 
         String[] urlPaths = findBeansXmlBases(META_INF_BEANS_XML, loader);
 
-        for (String urlPath : urlPaths) {
+        for (String urlPath : urlPaths)
+        {
             addWebBeansXmlLocation(urlPath);
         }
     }
