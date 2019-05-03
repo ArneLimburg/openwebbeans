@@ -18,7 +18,7 @@
  */
 package org.apache.webbeans.web.jetty9.test;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * Test bean which gets used in the TestServlet.

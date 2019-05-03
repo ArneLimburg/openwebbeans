@@ -20,7 +20,7 @@ package org.apache.webbeans.test.unittests.event;
 
 import java.lang.annotation.Annotation;
 
-import javax.enterprise.util.AnnotationLiteral;
+import jakarta.enterprise.util.AnnotationLiteral;
 
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.test.AbstractUnitTest;

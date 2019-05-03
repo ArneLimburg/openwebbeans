@@ -29,14 +29,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-el_2.2_spec</artifactId>
+            <groupId>org.apache.geronimo.jakarta-specs</groupId>
+            <artifactId>geronimo-jakarta-el_spec</artifactId>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-jcdi_2.0_spec</artifactId>
+            <groupId>org.apache.geronimo.jakarta-specs</groupId>
+            <artifactId>geronimo-jakarta-jcdi_spec</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

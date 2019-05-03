@@ -18,9 +18,9 @@
  */
 package org.apache.webbeans.component.creation;
 
-import javax.enterprise.inject.UnproxyableResolutionException;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.BeanAttributes;
+import jakarta.enterprise.inject.UnproxyableResolutionException;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.BeanAttributes;
 
 import org.apache.webbeans.component.ManagedBean;
 import org.apache.webbeans.component.WebBeansType;

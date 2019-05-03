@@ -18,10 +18,10 @@
  */
 package org.apache.webbeans.test.specalization;
 
-import javax.enterprise.inject.Alternative;
-import javax.enterprise.inject.New;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.Specializes;
+import jakarta.enterprise.inject.Alternative;
+import jakarta.enterprise.inject.New;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.Specializes;
 
 @Alternative
 public class AdvancedPenProducer extends DefaultPenProducer {

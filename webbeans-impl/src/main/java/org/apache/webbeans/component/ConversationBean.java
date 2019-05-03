@@ -22,8 +22,8 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.Collections;
 
-import javax.enterprise.context.Conversation;
-import javax.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Conversation;
+import jakarta.enterprise.context.RequestScoped;
 
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.conversation.ConversationImpl;

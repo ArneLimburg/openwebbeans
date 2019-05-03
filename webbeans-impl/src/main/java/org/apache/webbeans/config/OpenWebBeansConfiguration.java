@@ -137,9 +137,9 @@ public class OpenWebBeansConfiguration
      *
      * Example:
      * <pre>
-     * org.apache.webbeans.proxy.mapping.javax.enterprise.context.ApplicationScoped=org.apache.webbeans.intercept.ApplicationScopedBeanInterceptorHandler
-     * org.apache.webbeans.proxy.mapping.javax.enterprise.context.RequestScoped=org.apache.webbeans.intercept.RequestScopedBeanInterceptorHandler
-     * org.apache.webbeans.proxy.mapping.javax.enterprise.context.SessionScoped=org.apache.webbeans.intercept.SessionScopedBeanInterceptorHandler
+     * org.apache.webbeans.proxy.mapping.jakarta.enterprise.context.ApplicationScoped=org.apache.webbeans.intercept.ApplicationScopedBeanInterceptorHandler
+     * org.apache.webbeans.proxy.mapping.jakarta.enterprise.context.RequestScoped=org.apache.webbeans.intercept.RequestScopedBeanInterceptorHandler
+     * org.apache.webbeans.proxy.mapping.jakarta.enterprise.context.SessionScoped=org.apache.webbeans.intercept.SessionScopedBeanInterceptorHandler
      * </pre>
      *
      */

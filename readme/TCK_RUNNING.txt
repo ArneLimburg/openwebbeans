@@ -11,7 +11,7 @@ REQUIREMENTS
 
 1* Apache Tomcat 6 latest version.
 2* Copy the following jars into Tomcat lib/ folder
-  - geronimo-atinject_1.0_spec-1.0.jar
+  - geronimo-jakarta-atinject_spec-1.0.jar
   - geronimo-interceptor_1.1_spec-1.0.jar
   - geronimo-jcdi_1.0_spec-1.0.jar
   - openwebbeans-spi-1.0.0-SNAPSHOT.jar

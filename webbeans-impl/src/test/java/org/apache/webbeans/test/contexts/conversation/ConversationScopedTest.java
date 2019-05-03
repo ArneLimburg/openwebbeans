@@ -18,10 +18,10 @@
 */
 package org.apache.webbeans.test.contexts.conversation;
 
-import javax.enterprise.context.ConversationScoped;
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.context.spi.Context;
+import jakarta.enterprise.context.ConversationScoped;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.context.spi.Context;
 
 import org.junit.Assert;
 import org.apache.webbeans.config.OpenWebBeansConfiguration;

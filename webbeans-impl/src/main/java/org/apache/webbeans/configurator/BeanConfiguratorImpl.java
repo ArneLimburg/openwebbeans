@@ -18,20 +18,20 @@
  */
 package org.apache.webbeans.configurator;
 
-import javax.enterprise.context.Dependent;
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.inject.Any;
-import javax.enterprise.inject.Instance;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanAttributes;
-import javax.enterprise.inject.spi.CDI;
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.enterprise.inject.spi.PassivationCapable;
-import javax.enterprise.inject.spi.Producer;
-import javax.enterprise.inject.spi.configurator.BeanConfigurator;
-import javax.enterprise.util.TypeLiteral;
-import javax.inject.Named;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.enterprise.inject.Any;
+import jakarta.enterprise.inject.Instance;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanAttributes;
+import jakarta.enterprise.inject.spi.CDI;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.enterprise.inject.spi.PassivationCapable;
+import jakarta.enterprise.inject.spi.Producer;
+import jakarta.enterprise.inject.spi.configurator.BeanConfigurator;
+import jakarta.enterprise.util.TypeLiteral;
+import jakarta.inject.Named;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.ParameterizedType;

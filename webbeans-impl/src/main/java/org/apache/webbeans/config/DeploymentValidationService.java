@@ -26,15 +26,15 @@ import java.lang.reflect.Modifier;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import javax.enterprise.inject.Disposes;
-import javax.enterprise.inject.TransientReference;
-import javax.enterprise.inject.UnproxyableResolutionException;
-import javax.enterprise.inject.spi.Annotated;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.Decorator;
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.enterprise.inject.spi.Interceptor;
-import javax.enterprise.inject.spi.PassivationCapable;
+import jakarta.enterprise.inject.Disposes;
+import jakarta.enterprise.inject.TransientReference;
+import jakarta.enterprise.inject.UnproxyableResolutionException;
+import jakarta.enterprise.inject.spi.Annotated;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.Decorator;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.enterprise.inject.spi.Interceptor;
+import jakarta.enterprise.inject.spi.PassivationCapable;
 
 import org.apache.webbeans.component.EnterpriseBeanMarker;
 import org.apache.webbeans.component.OwbBean;

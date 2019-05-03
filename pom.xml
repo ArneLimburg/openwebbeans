@@ -60,14 +60,14 @@
         <geronimo_jaxws.version>1.0</geronimo_jaxws.version>
         <geronimo_servlet.version>1.0</geronimo_servlet.version>
         <geronimo_ejb.version>1.0.2</geronimo_ejb.version>
-        <geronimo_el.version>1.0.4</geronimo_el.version>
-        <geronimo_annotation.version>1.0</geronimo_annotation.version>
+        <geronimo_el.version>2.2_1-SNAPSHOT</geronimo_el.version>
+        <geronimo_annotation.version>1.3_1-SNAPSHOT</geronimo_annotation.version>
         <geronimo_jpa.version>1.1</geronimo_jpa.version>
         <geronimo_jta.version>1.1.1</geronimo_jta.version>
         <geronimo_jsp.version>1.0.1</geronimo_jsp.version>
-        <geronimo_cdi.version>1.0.1</geronimo_cdi.version>
-        <geronimo_atinject.version>1.0</geronimo_atinject.version>
-        <geronimo_interceptor.version>1.0</geronimo_interceptor.version>
+        <geronimo_cdi.version>2.0_1-SNAPSHOT</geronimo_cdi.version>
+        <geronimo_atinject.version>1.0_1-SNAPSHOT</geronimo_atinject.version>
+        <geronimo_interceptor.version>1.2_1-SNAPSHOT</geronimo_interceptor.version>
         <geronimo_validation.version>1.1</geronimo_validation.version>
         <tomcat7.version>7.0.73</tomcat7.version>
         <!-- jetty 9.4.13+ broke session persistence: https://github.com/eclipse/jetty.project/issues/3597 -->
@@ -538,22 +538,25 @@
         <module>webbeans-spi</module>
         <module>webbeans-impl</module>
         <module>webbeans-ee-common</module>
-        <module>webbeans-web</module>
         <module>webbeans-ejb</module>
         <module>webbeans-ee</module>
+        <module>webbeans-el22</module>
+        <module>webbeans-resource</module>
+        <module>webbeans-osgi</module>
+
+<!--
+        <module>webbeans-arquillian</module>
+        <module>webbeans-web</module>
         <module>webbeans-tomcat7</module>
         <module>webbeans-jetty9</module>
         <module>webbeans-jms</module>
         <module>webbeans-jsf</module>
-        <module>webbeans-el22</module>
-        <module>webbeans-resource</module>
-        <module>webbeans-osgi</module>
-        <module>webbeans-porting</module>
-        <module>webbeans-arquillian</module>
         <module>samples</module>
+        <module>webbeans-porting</module>
         <module>atinject-tck</module>
         <module>webbeans-tck</module>
         <module>distribution</module>
+-->
         <module>webbeans-maven</module>
         <module>webbeans-gradle</module>
         <module>webbeans-se</module>
@@ -584,8 +587,8 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.geronimo.specs</groupId>
-                <artifactId>geronimo-el_2.2_spec</artifactId>
+                <groupId>org.apache.geronimo.jakarta-specs</groupId>
+                <artifactId>geronimo-jakarta-el_spec</artifactId>
                 <version>${geronimo_el.version}</version>
             </dependency>
 
@@ -627,8 +630,8 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.geronimo.specs</groupId>
-                <artifactId>geronimo-annotation_1.3_spec</artifactId>
+                <groupId>org.apache.geronimo.jakarta-specs</groupId>
+                <artifactId>geronimo-jakarta-annotation_spec</artifactId>
                 <version>${geronimo_annotation.version}</version>
             </dependency>
 
@@ -638,7 +641,7 @@
                 <version>4.2.0</version>
                 <scope>provided</scope>
             </dependency>
-            
+
 
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
@@ -647,8 +650,8 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.geronimo.specs</groupId>
-                <artifactId>geronimo-interceptor_1.2_spec</artifactId>
+                <groupId>org.apache.geronimo.jakarta-specs</groupId>
+                <artifactId>geronimo-jakarta-interceptor_spec</artifactId>
                 <version>${geronimo_interceptor.version}</version>
             </dependency>
 
@@ -666,14 +669,14 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.geronimo.specs</groupId>
-                <artifactId>geronimo-jcdi_2.0_spec</artifactId>
+                <groupId>org.apache.geronimo.jakarta-specs</groupId>
+                <artifactId>geronimo-jakarta-jcdi_spec</artifactId>
                 <version>${geronimo_cdi.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.geronimo.specs</groupId>
-                <artifactId>geronimo-atinject_1.0_spec</artifactId>
+                <groupId>org.apache.geronimo.jakarta-specs</groupId>
+                <artifactId>geronimo-jakarta-atinject_spec</artifactId>
                 <version>${geronimo_atinject.version}</version>
             </dependency>
 

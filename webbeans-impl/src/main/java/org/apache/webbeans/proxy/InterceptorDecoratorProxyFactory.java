@@ -32,8 +32,8 @@ import org.apache.xbean.asm7.MethodVisitor;
 import org.apache.xbean.asm7.Opcodes;
 import org.apache.xbean.asm7.Type;
 
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.Bean;
 import java.io.ObjectStreamException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

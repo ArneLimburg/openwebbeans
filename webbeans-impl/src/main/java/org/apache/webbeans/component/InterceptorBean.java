@@ -18,11 +18,11 @@
  */
 package org.apache.webbeans.component;
 
-import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.InterceptionType;
-import javax.enterprise.inject.spi.Interceptor;
-import javax.interceptor.InvocationContext;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.InterceptionType;
+import jakarta.enterprise.inject.spi.Interceptor;
+import jakarta.interceptor.InvocationContext;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.Map;
 
-import javax.enterprise.inject.spi.BeanAttributes;
+import jakarta.enterprise.inject.spi.BeanAttributes;
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.container.InjectionTargetFactoryImpl;
 import org.apache.webbeans.container.InterceptorInjectionTargetFactory;

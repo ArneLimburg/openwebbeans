@@ -39,8 +39,8 @@ import org.apache.xbean.finder.archive.Archive;
 import org.apache.xbean.finder.filter.Filter;
 import org.apache.xbean.finder.util.Files;
 
-import javax.decorator.Decorator;
-import javax.interceptor.Interceptor;
+import jakarta.decorator.Decorator;
+import jakarta.interceptor.Interceptor;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.net.URL;

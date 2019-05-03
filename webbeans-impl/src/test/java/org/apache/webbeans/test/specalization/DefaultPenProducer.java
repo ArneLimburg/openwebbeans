@@ -18,8 +18,8 @@
  */
 package org.apache.webbeans.test.specalization;
 
-import javax.enterprise.inject.New;
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.inject.New;
+import jakarta.enterprise.inject.Produces;
 
 public class DefaultPenProducer {
 

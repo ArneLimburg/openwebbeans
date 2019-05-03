@@ -18,10 +18,10 @@
  */
 package org.apache.webbeans.test.portable.injectiontarget.supportInjections;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.enterprise.inject.New;
+import jakarta.inject.Inject;
 
 import org.apache.webbeans.test.promethods.common.Person;
 import org.apache.webbeans.test.annotation.binding.Binding1;

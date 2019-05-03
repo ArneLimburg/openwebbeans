@@ -18,12 +18,12 @@
  */
 package org.apache.webbeans.test.disposes.beans;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.Disposes;
-import javax.enterprise.inject.New;
-import javax.enterprise.inject.Produces;
-import javax.inject.Named;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.Disposes;
+import jakarta.enterprise.inject.New;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Named;
 
 import org.apache.webbeans.test.concepts.alternatives.common.Pencil;
 import org.apache.webbeans.test.disposes.common.DependentModel;

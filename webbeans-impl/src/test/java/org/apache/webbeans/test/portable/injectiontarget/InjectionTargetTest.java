@@ -21,9 +21,9 @@ package org.apache.webbeans.test.portable.injectiontarget;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.inject.spi.InjectionTarget;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.enterprise.inject.spi.InjectionTarget;
 
 import org.junit.Assert;
 

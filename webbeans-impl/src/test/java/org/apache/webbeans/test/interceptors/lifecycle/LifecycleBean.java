@@ -18,8 +18,8 @@
  */
 package org.apache.webbeans.test.interceptors.lifecycle;
 
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.New;
+import jakarta.inject.Inject;
 
 @LifecycleBinding
 public class LifecycleBean

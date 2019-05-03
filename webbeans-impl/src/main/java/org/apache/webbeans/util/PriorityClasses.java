@@ -18,7 +18,7 @@
  */
 package org.apache.webbeans.util;
 
-import javax.annotation.Priority;
+import jakarta.annotation.Priority;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

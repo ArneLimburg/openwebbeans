@@ -31,16 +31,16 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.InterceptionType;
-import javax.enterprise.inject.spi.Interceptor;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.InterceptionType;
+import jakarta.enterprise.inject.spi.Interceptor;
 
 import org.apache.webbeans.component.BeanAttributesImpl;
 import org.apache.webbeans.component.creation.BeanAttributesBuilder;
 import org.apache.webbeans.component.creation.EjbInterceptorBeanBuilder;
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.container.BeanManagerImpl;
-import javax.annotation.Priority;
+import jakarta.annotation.Priority;
 
 import org.apache.webbeans.exception.WebBeansDeploymentException;
 import org.apache.webbeans.util.AnnotationUtil;
@@ -278,7 +278,7 @@ public class InterceptorsManager
 
     /**
      * Add a CDI-style interceptor.
-     * These are interceptors declared using an {@link javax.interceptor.InterceptorBinding}.
+     * These are interceptors declared using an {@link jakarta.interceptor.InterceptorBinding}.
      * @param interceptor
      */
     public void addCdiInterceptor(Interceptor interceptor)
@@ -346,7 +346,7 @@ public class InterceptorsManager
             AnnotatedType<?> annotatedType = webBeansContext.getAnnotatedElementFactory().newAnnotatedType(interceptorClass);
 
             // Validate decorator classes
-            if(!annotatedType.isAnnotationPresent(javax.interceptor.Interceptor.class) &&
+            if(!annotatedType.isAnnotationPresent(jakarta.interceptor.Interceptor.class) &&
                !containsCustomInterceptorClass(interceptorClass))
             {
                 throw new WebBeansDeploymentException("Given class : " + interceptorClass + " is not a interceptor class");

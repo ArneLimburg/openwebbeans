@@ -21,8 +21,8 @@ package org.apache.webbeans.container;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.inject.spi.Bean;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.inject.spi.Bean;
 
 import org.apache.webbeans.util.WebBeansUtil;
 

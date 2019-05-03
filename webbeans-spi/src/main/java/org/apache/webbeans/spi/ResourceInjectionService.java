@@ -24,7 +24,7 @@ import java.io.ObjectOutput;
 import java.lang.annotation.Annotation;
 
 
-import javax.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.Bean;
 import org.apache.webbeans.spi.api.ResourceReference;
 
 /**

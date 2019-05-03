@@ -25,9 +25,9 @@ import java.io.Serializable;
 import org.apache.webbeans.reservation.entity.User;
 import org.apache.webbeans.reservation.events.LoggedInEvent;
 
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.event.Observes;
-import javax.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.event.Observes;
+import jakarta.inject.Named;
 
 @SessionScoped
 @Named

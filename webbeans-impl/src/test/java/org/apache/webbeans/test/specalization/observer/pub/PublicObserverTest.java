@@ -23,7 +23,7 @@ import org.apache.webbeans.test.specalization.observer.TestEvent;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.Bean;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;

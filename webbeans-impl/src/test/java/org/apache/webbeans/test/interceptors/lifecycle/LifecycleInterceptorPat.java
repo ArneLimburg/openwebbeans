@@ -18,9 +18,9 @@
  */
 package org.apache.webbeans.test.interceptors.lifecycle;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.interceptor.InvocationContext;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.interceptor.InvocationContext;
 import java.io.Serializable;
 
 /**

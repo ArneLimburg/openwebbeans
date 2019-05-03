@@ -21,12 +21,12 @@ package org.apache.webbeans.test.producer;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.enterprise.inject.AmbiguousResolutionException;
+import jakarta.enterprise.inject.AmbiguousResolutionException;
 
 import org.junit.Assert;
 
 import org.apache.webbeans.exception.WebBeansConfigurationException;
-import javax.enterprise.inject.spi.DeploymentException;
+import jakarta.enterprise.inject.spi.DeploymentException;
 
 import org.apache.webbeans.exception.WebBeansDeploymentException;
 import org.apache.webbeans.test.AbstractUnitTest;

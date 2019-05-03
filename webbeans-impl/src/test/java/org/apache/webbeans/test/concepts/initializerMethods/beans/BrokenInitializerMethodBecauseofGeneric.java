@@ -20,8 +20,8 @@ package org.apache.webbeans.test.concepts.initializerMethods.beans;
 
 import java.util.ArrayList;
 
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.New;
+import jakarta.inject.Inject;
 
 public class BrokenInitializerMethodBecauseofGeneric
 {

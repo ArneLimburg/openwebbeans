@@ -13,9 +13,9 @@ maven://org.apache.openwebbeans/openwebbeans-impl/${apache-owb.version}|lib/apac
 maven://org.apache.openwebbeans/openwebbeans-web/${apache-owb.version}|lib/apache-owb/openwebbeans-web-${apache-owb.version}.jar
 maven://org.apache.openwebbeans/openwebbeans-el22/${apache-owb.version}|lib/apache-owb/openwebbeans-el22-${apache-owb.version}.jar
 maven://org.apache.openwebbeans/openwebbeans-jetty9/${apache-owb.version}|lib/apache-owb/openwebbeans-jetty9-${apache-owb.version}.jar
-maven://org.apache.geronimo.specs/geronimo-jcdi_2.0_spec/${geronimo-cdi.version}|lib/apache-owb/geronimo-jcdi_2.0_spec-${geronimo-cdi.version}.jar
-maven://org.apache.geronimo.specs/geronimo-atinject_1.0_spec/${geronimo-atinject.version}|lib/apache-owb/geronimo-atinject_1.0_spec-${geronimo-atinject.version}.jar
-maven://org.apache.geronimo.specs/geronimo-interceptor_1.2_spec/${geronimo-interceptor.version}|lib/apache-owb/geronimo-interceptor_1.2_spec-${geronimo-interceptor.version}.jar
+maven://org.apache.geronimo.specs/geronimo-jakarta-jcdi_spec/${geronimo-cdi.version}|lib/apache-owb/geronimo-jakarta-jcdi_spec-${geronimo-cdi.version}.jar
+maven://org.apache.geronimo.specs/geronimo-jakarta-atinject_spec/${geronimo-atinject.version}|lib/apache-owb/geronimo-jakarta-atinject_spec-${geronimo-atinject.version}.jar
+maven://org.apache.geronimo.specs/geronimo-jakarta-interceptor_spec/${geronimo-interceptor.version}|lib/apache-owb/geronimo-jakarta-interceptor_spec-${geronimo-interceptor.version}.jar
 maven://org.apache.xbean/xbean-finder-shaded/${xbean.version}|lib/apache-owb/xbean-finder-shaded-${xbean.version}.jar
 maven://org.apache.xbean/xbean-asm7-shaded/${xbean.version}|lib/apache-owb/xbean-asm7-shaded-${xbean.version}.jar
 

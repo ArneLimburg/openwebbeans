@@ -34,26 +34,47 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.el.ELResolver;
-import javax.el.ExpressionFactory;
-import javax.enterprise.context.ContextNotActiveException;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.context.NormalScope;
-import javax.enterprise.context.spi.AlterableContext;
-import javax.enterprise.context.spi.Context;
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.event.Event;
-import javax.enterprise.inject.Default;
-import javax.enterprise.inject.InjectionException;
-import javax.enterprise.inject.Instance;
-import javax.enterprise.inject.Stereotype;
-import javax.enterprise.inject.Vetoed;
-import javax.enterprise.inject.spi.*;
-import javax.inject.Scope;
-import javax.interceptor.InterceptorBinding;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.el.ELResolver;
+import jakarta.el.ExpressionFactory;
+import jakarta.enterprise.context.ContextNotActiveException;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.context.NormalScope;
+import jakarta.enterprise.context.spi.AlterableContext;
+import jakarta.enterprise.context.spi.Context;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.enterprise.event.Event;
+import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.inject.InjectionException;
+import jakarta.enterprise.inject.Instance;
+import jakarta.enterprise.inject.Stereotype;
+import jakarta.enterprise.inject.Vetoed;
+import jakarta.enterprise.inject.spi.AnnotatedField;
+import jakarta.enterprise.inject.spi.AnnotatedMember;
+import jakarta.enterprise.inject.spi.AnnotatedMethod;
+import jakarta.enterprise.inject.spi.AnnotatedParameter;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanAttributes;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.inject.spi.Decorator;
+import jakarta.enterprise.inject.spi.DefinitionException;
+import jakarta.enterprise.inject.spi.DeploymentException;
+import jakarta.enterprise.inject.spi.Extension;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.enterprise.inject.spi.InjectionTarget;
+import jakarta.enterprise.inject.spi.InjectionTargetFactory;
+import jakarta.enterprise.inject.spi.InterceptionFactory;
+import jakarta.enterprise.inject.spi.InterceptionType;
+import jakarta.enterprise.inject.spi.Interceptor;
+import jakarta.enterprise.inject.spi.ObserverMethod;
+import jakarta.enterprise.inject.spi.PassivationCapable;
+import jakarta.enterprise.inject.spi.Producer;
+import jakarta.enterprise.inject.spi.ProducerFactory;
+import jakarta.inject.Scope;
+import jakarta.interceptor.InterceptorBinding;
 import javax.naming.NamingException;
 import javax.naming.Reference;
 import javax.naming.Referenceable;
@@ -153,7 +174,7 @@ public class BeanManagerImpl implements BeanManager, Referenceable
 
     /**
      * This list contains additional qualifiers which got set via the
-     * {@link javax.enterprise.inject.spi.BeforeBeanDiscovery#addQualifier(Class)}
+     * {@link jakarta.enterprise.inject.spi.BeforeBeanDiscovery#addQualifier(Class)}
      * event function.
      */
     private List<Class<? extends Annotation>> additionalQualifiers = new ArrayList<>();
@@ -161,7 +182,7 @@ public class BeanManagerImpl implements BeanManager, Referenceable
 
     /**
      * This list contains additional scopes which got set via the
-     * {@link javax.enterprise.inject.spi.BeforeBeanDiscovery#addScope(Class, boolean, boolean)} event function.
+     * {@link jakarta.enterprise.inject.spi.BeforeBeanDiscovery#addScope(Class, boolean, boolean)} event function.
      */
     private List<ExternalScope> additionalScopes = new ArrayList<>();
 
@@ -177,7 +198,7 @@ public class BeanManagerImpl implements BeanManager, Referenceable
     private ErrorStack errorStack = new ErrorStack();
 
     /**
-     * This map stores all beans along with their unique {@link javax.enterprise.inject.spi.PassivationCapable} id.
+     * This map stores all beans along with their unique {@link jakarta.enterprise.inject.spi.PassivationCapable} id.
      * This is used as a reference for serialization.
      */
     private ConcurrentMap<String, Bean<?>> passivationBeans = new ConcurrentHashMap<>();
@@ -199,13 +220,13 @@ public class BeanManagerImpl implements BeanManager, Referenceable
 
     /**
      * This flag will get set to handle lifecyle around
-     * {@link javax.enterprise.inject.spi.AfterBeanDiscovery}
+     * {@link jakarta.enterprise.inject.spi.AfterBeanDiscovery}
      */
     private LifecycleState beanDiscoveryState = LifecycleState.BEFORE_DISCOVERY;
 
     /**
      * This flag will get set to {@code true} after the
-     * {@link javax.enterprise.inject.spi.AfterDeploymentValidation} gets fired
+     * {@link jakarta.enterprise.inject.spi.AfterDeploymentValidation} gets fired
      */
     private boolean afterDeploymentValidationFired;
 
@@ -537,7 +558,7 @@ public class BeanManagerImpl implements BeanManager, Referenceable
         return deploymentBeans;
     }
 
-    private void addContext(Class<? extends Annotation> scopeType, javax.enterprise.context.spi.Context context)
+    private void addContext(Class<? extends Annotation> scopeType, jakarta.enterprise.context.spi.Context context)
     {
         Asserts.assertNotNull(scopeType, "scopeType");
         Asserts.assertNotNull(context, "context");

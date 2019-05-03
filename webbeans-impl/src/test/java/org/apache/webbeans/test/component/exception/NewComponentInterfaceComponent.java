@@ -18,8 +18,8 @@
  */
 package org.apache.webbeans.test.component.exception;
 
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.New;
+import jakarta.inject.Inject;
 
 import org.apache.webbeans.test.component.service.IService;
 

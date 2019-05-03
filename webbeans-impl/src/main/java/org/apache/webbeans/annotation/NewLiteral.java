@@ -18,8 +18,8 @@
  */
 package org.apache.webbeans.annotation;
 
-import javax.enterprise.inject.New;
-import javax.enterprise.util.AnnotationLiteral;
+import jakarta.enterprise.inject.New;
+import jakarta.enterprise.util.AnnotationLiteral;
 
 /**
  * {@link New} literal annotation.

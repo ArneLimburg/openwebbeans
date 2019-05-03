@@ -41,9 +41,9 @@ under the License.
             <includes>
                 <include>org.apache.openwebbeans:openwebbeans-impl</include>
                 <include>org.apache.openwebbeans:openwebbeans-spi</include>
-                <include>org.apache.geronimo.specs:geronimo-el_2.2_spec</include>
+                <include>org.apache.geronimo.specs:geronimo-jakarta-el_spec</include>
                 <include>org.apache.geronimo.specs:geronimo-interceptor_1.1_spec</include>
-                <include>org.apache.geronimo.specs:geronimo-atinject_1.0_spec</include>
+                <include>org.apache.geronimo.specs:geronimo-jakarta-atinject_spec</include>
                 <include>org.apache.geronimo.specs:geronimo-jcdi_1.0_spec</include>
                 <include>dom4j:dom4j</include>
             </includes>

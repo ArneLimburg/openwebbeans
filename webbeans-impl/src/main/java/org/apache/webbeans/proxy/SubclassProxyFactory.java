@@ -32,9 +32,9 @@ import org.apache.xbean.asm7.MethodVisitor;
 import org.apache.xbean.asm7.Opcodes;
 import org.apache.xbean.asm7.Type;
 
-import javax.enterprise.inject.spi.AnnotatedConstructor;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.spi.AnnotatedConstructor;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.inject.Inject;
 
 /**
  * This factory creates subclasses for abstract classes.

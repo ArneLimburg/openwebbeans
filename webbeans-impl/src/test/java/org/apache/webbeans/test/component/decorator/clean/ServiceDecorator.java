@@ -18,11 +18,11 @@
  */
 package org.apache.webbeans.test.component.decorator.clean;
 
-import javax.decorator.Delegate;
-import javax.decorator.Decorator;
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.decorator.Delegate;
+import jakarta.decorator.Decorator;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 import org.apache.webbeans.test.annotation.binding.Binding1;
 import org.apache.webbeans.test.component.service.IService;

@@ -18,9 +18,9 @@
  */
 package org.apache.webbeans.test.managed.newcomp;
 
-import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.New;
+import jakarta.inject.Inject;
 
 import org.apache.webbeans.test.component.dependent.DependentOwnerComponent;
 

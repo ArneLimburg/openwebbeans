@@ -20,8 +20,8 @@ package org.apache.webbeans.context;
 
 import java.util.HashMap;
 
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.spi.Contextual;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.spi.Contextual;
 
 import org.apache.webbeans.intercept.RequestScopedBeanInterceptorHandler;
 

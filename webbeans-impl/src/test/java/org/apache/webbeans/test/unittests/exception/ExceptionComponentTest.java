@@ -19,7 +19,7 @@
 package org.apache.webbeans.test.unittests.exception;
 
 
-import javax.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.Bean;
 
 import java.util.Set;
 

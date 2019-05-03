@@ -21,7 +21,7 @@ package org.apache.webbeans.test.unittests.event.exception;
 import java.lang.annotation.Annotation;
 import java.lang.annotation.Documented;
 
-import javax.enterprise.util.AnnotationLiteral;
+import jakarta.enterprise.util.AnnotationLiteral;
 
 import org.apache.webbeans.config.WebBeansContext;
 import org.apache.webbeans.test.AbstractUnitTest;

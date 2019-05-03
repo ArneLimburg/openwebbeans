@@ -28,9 +28,9 @@ import org.apache.webbeans.spi.ScannerService;
 import org.apache.webbeans.spi.SingletonService;
 import org.apache.webbeans.xml.DefaultBeanArchiveInformation;
 
-import javax.enterprise.inject.se.SeContainer;
-import javax.enterprise.inject.se.SeContainerInitializer;
-import javax.enterprise.inject.spi.Extension;
+import jakarta.enterprise.inject.se.SeContainer;
+import jakarta.enterprise.inject.se.SeContainerInitializer;
+import jakarta.enterprise.inject.spi.Extension;
 
 import java.io.IOException;
 import java.io.StringReader;
